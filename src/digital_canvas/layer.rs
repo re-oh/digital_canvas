@@ -1,10 +1,10 @@
 use image::{ImageBuffer, RgbaImage};
 use super::dimensions::Dimensions;
-use super::render::GenericRenderData;
+use super::render::{GenericRenderData, Renderable};
 
 pub struct Layer {
   image_buffer: RgbaImage,
-  render_buffer: Vec<GenericRenderData>,
+  render_buffer: Vec<Box<dyn Renderable>>,
   dimensions: Dimensions,
   zindex: i32,
   layername: String
