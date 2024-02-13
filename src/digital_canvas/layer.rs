@@ -6,7 +6,7 @@ pub struct Layer {
   image_buffer: RgbaImage,
   render_buffer: Vec<Box<dyn Renderable>>,
   dimensions: Dimensions,
-  zindex: i32,
+  pub zindex: i32,
   layername: String
 }
 
