@@ -8,6 +8,7 @@ pub struct Canvas {
 }
 
 impl Canvas {
+
   fn new(width:u32, height:u32) -> Self {
     Self {
       layers: vec![],
@@ -22,7 +23,4 @@ impl Canvas {
       Dimensions::new_from_tuple(self.dimensions.to_tuple()),
       self.layers.iter().max_by_key(|layer| layer.zindex).unwrap().zindex + 1,))
   }
-
-  
-
 }
